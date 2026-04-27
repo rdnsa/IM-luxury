@@ -8,5 +8,8 @@ export type Product = {
   price: number;
   description: string;
   image: string;
+  sizes?: string[];
+  colors?: string[];
+  colorImages?: Record<string, string>;
   featured?: boolean;
 };
