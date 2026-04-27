@@ -36,6 +36,7 @@ export function LuxuryNavbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
+                  scroll
                   className={`transition duration-300 hover:text-luxury-gold ${
                     active ? "text-luxury-gold" : ""
                   }`}

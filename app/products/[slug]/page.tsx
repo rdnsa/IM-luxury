@@ -31,8 +31,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   );
 
   return (
-    <main className="pt-32">
-      <div className="luxury-container section-spacing">
+    <main className="pt-28">
+      <div className="luxury-container pb-16 pt-3 md:pb-24 md:pt-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
           <ProductGallery name={product.name} image={product.image} />
           <section className="space-y-7">

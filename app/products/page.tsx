@@ -8,7 +8,7 @@ export default async function ProductsPage() {
   const cards = products.map(mapProductToCardModel);
 
   return (
-    <main className="luxury-container section-spacing pt-32">
+    <main className="luxury-container pb-16 pt-28 md:pb-24">
       <header className="mb-10 space-y-4">
         <p className="text-sm uppercase tracking-[0.35em] text-luxury-gold">Product Showcase</p>
         <h1 className="font-[var(--font-serif)] text-4xl text-luxury-white md:text-5xl">Bags & Shoes</h1>
