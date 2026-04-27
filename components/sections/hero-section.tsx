@@ -54,7 +54,7 @@ export function HeroSection() {
             Explore Collection
           </Link>
           <a
-            href="https://wa.me/6281234567890?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20discover%20your%20latest%20collection."
+            href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20discover%20your%20latest%20collection."
             target="_blank"
             rel="noreferrer"
             className="rounded-full border border-luxury-white/45 px-7 py-3 text-xs uppercase tracking-[0.25em] text-luxury-white transition duration-500 hover:border-luxury-gold hover:text-luxury-gold"
