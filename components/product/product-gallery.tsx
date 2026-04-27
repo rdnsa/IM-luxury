@@ -14,7 +14,7 @@ export function ProductGallery({ name, image }: ProductGalleryProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
-      className="group relative h-[520px] overflow-hidden rounded-3xl border border-white/10 bg-black/40"
+      className="group relative h-[360px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 sm:h-[430px] md:h-[520px] md:rounded-3xl"
     >
       <Image
         src={image}

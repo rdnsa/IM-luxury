@@ -31,18 +31,20 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   );
 
   return (
-    <main className="pt-28">
+    <main className="pt-24 md:pt-28">
       <div className="luxury-container pb-16 pt-3 md:pb-24 md:pt-6">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="grid gap-7 md:gap-10 lg:grid-cols-2 lg:gap-14">
           <ProductGallery name={product.name} image={product.image} />
-          <section className="space-y-7">
-            <p className="text-xs uppercase tracking-[0.3em] text-luxury-gold">{product.category}</p>
-            <h1 className="font-[var(--font-serif)] text-4xl leading-tight md:text-5xl">{product.name}</h1>
-            <p className="text-lg text-luxury-white/70">{product.description}</p>
+          <section className="space-y-5 md:space-y-7">
+            <p className="text-[11px] uppercase tracking-[0.24em] text-luxury-gold md:text-xs md:tracking-[0.3em]">
+              {product.category}
+            </p>
+            <h1 className="font-[var(--font-serif)] text-3xl leading-tight md:text-5xl">{product.name}</h1>
+            <p className="text-base text-luxury-white/70 md:text-lg">{product.description}</p>
             <div className="gold-line" />
             <div className="space-y-3">
-              <p className="text-3xl font-semibold">{formatCurrency(product.price)}</p>
-              <p className="text-sm uppercase tracking-[0.18em] text-luxury-white/60">
+              <p className="text-2xl font-semibold md:text-3xl">{formatCurrency(product.price)}</p>
+              <p className="text-xs uppercase tracking-[0.14em] text-luxury-white/60 md:text-sm md:tracking-[0.18em]">
                 Handcrafted Premium Collection
               </p>
             </div>
@@ -50,7 +52,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               href={`https://wa.me/6281234567890?text=${whatsappMessage}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-luxury-gold bg-luxury-gold px-8 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-luxury-black transition duration-500 hover:scale-[1.03] hover:shadow-luxury"
+              className="inline-flex items-center rounded-full border border-luxury-gold bg-luxury-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-luxury-black transition duration-500 hover:scale-[1.03] hover:shadow-luxury md:px-8 md:text-sm md:tracking-[0.22em]"
             >
               Inquire via WhatsApp
             </a>
