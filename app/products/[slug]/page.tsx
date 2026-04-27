@@ -10,6 +10,14 @@ type ProductDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateStaticParams() {
+  const products = await getProducts(createMockProductRepository());
+
+  return products.map((product) => ({ slug: product.slug }));
+}
+
+export const dynamicParams = false;
+
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { slug } = await params;
   const repository = createMockProductRepository();

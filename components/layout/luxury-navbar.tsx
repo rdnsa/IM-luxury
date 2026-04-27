@@ -25,7 +25,7 @@ export function LuxuryNavbar() {
       initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
-      className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/45 backdrop-blur-xl"
+      className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/55 backdrop-blur-xl"
     >
       <div className="border-b border-white/10 bg-gradient-to-r from-[#1e1811] via-black to-[#1e1811]">
         <div className="luxury-container py-2 text-center text-[9px] uppercase tracking-[0.2em] text-luxury-beige md:text-[10px] md:tracking-[0.24em]">
@@ -74,7 +74,7 @@ export function LuxuryNavbar() {
               href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-luxury-gold px-4 py-2 text-[10px] tracking-[0.2em] text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"
+              className="rounded-full border border-luxury-gold bg-black/30 px-4 py-2 text-[10px] tracking-[0.2em] text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"
             >
               Private Consult
             </a>
