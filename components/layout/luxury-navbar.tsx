@@ -71,7 +71,7 @@ export function LuxuryNavbar() {
           })}
           <li>
             <a
-              href="https://wa.me/6281234567890?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
+              href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-luxury-gold px-4 py-2 text-[10px] tracking-[0.2em] text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"
@@ -82,7 +82,7 @@ export function LuxuryNavbar() {
         </ul>
         <div className="flex items-center gap-2 md:hidden">
           <a
-            href="https://wa.me/6281234567890?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
+            href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
             target="_blank"
             rel="noreferrer"
             className="rounded-full border border-luxury-gold px-3 py-2 text-[10px] tracking-[0.16em] text-luxury-gold"
@@ -132,7 +132,7 @@ export function LuxuryNavbar() {
               })}
               <li>
                 <a
-                  href="https://wa.me/6281234567890?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
+                  href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
                   target="_blank"
                   rel="noreferrer"
                   className="block rounded-xl border border-luxury-gold px-4 py-3 text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"

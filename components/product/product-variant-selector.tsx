@@ -112,7 +112,7 @@ export function ProductVariantSelector({
       )}
 
       <a
-        href={`https://wa.me/6281234567890?text=${whatsappMessage}`}
+        href={`https://wa.me/6285156684881?text=${whatsappMessage}`}
         target="_blank"
         rel="noreferrer"
         className="inline-flex items-center rounded-full border border-luxury-gold bg-luxury-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-luxury-black transition duration-500 hover:scale-[1.03] hover:shadow-luxury md:px-8 md:text-sm md:tracking-[0.22em]"

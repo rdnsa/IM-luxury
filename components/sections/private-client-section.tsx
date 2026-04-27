@@ -9,7 +9,7 @@ export function PrivateClientSection() {
 
   const whatsappLink = useMemo(() => {
     const message = `Hello I'M LUXURY BAG, my name is ${name || "private client"}. I am interested in ${interest} with budget ${budget}. Please assist me with recommendations.`;
-    return `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/6285156684881?text=${encodeURIComponent(message)}`;
   }, [budget, interest, name]);
 
   return (
