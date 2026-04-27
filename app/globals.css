@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top right, rgba(184, 156, 109, 0.1), transparent 34%), #0a0a0a;
+  color: #f8f6f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.luxury-container {
+  @apply mx-auto w-full max-w-7xl px-5 md:px-10;
+}
+
+.section-spacing {
+  @apply py-16 md:py-24;
+}
+
+::selection {
+  background: rgba(184, 156, 109, 0.35);
+  color: #f8f6f2;
+}
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184, 156, 109, 0.7), transparent);
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.08) 25%,
+    rgba(255, 255, 255, 0.18) 37%,
+    rgba(255, 255, 255, 0.08) 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 2s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
