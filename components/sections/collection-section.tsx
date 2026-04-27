@@ -10,17 +10,17 @@ type CollectionSectionProps = {
 
 export function CollectionSection({ title, subtitle, products }: CollectionSectionProps) {
   return (
-    <section className="section-spacing bg-gradient-to-b from-black via-luxury-slate to-black">
+    <section className="section-spacing bg-gradient-to-b from-black via-[#0c0c0c] to-black">
       <div className="luxury-container">
-        <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="mb-3 text-xs uppercase tracking-[0.3em] text-luxury-gold">Featured</p>
-            <h2 className="font-[var(--font-serif)] text-3xl md:text-5xl">{title}</h2>
-            <p className="mt-4 max-w-2xl text-luxury-white/70">{subtitle}</p>
+            <p className="mb-3 text-xs uppercase tracking-[0.32em] text-luxury-gold">Featured Collection</p>
+            <h2 className="font-[var(--font-serif)] text-4xl leading-tight md:text-6xl">{title}</h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-luxury-white/70">{subtitle}</p>
           </div>
           <Link
             href="/products"
-            className="text-xs uppercase tracking-[0.25em] text-luxury-gold transition hover:text-luxury-beige"
+            className="inline-flex items-center rounded-full border border-luxury-gold/55 px-6 py-2 text-xs uppercase tracking-[0.25em] text-luxury-gold transition hover:border-luxury-gold hover:bg-luxury-gold hover:text-luxury-black"
           >
             View All
           </Link>

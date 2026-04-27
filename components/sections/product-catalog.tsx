@@ -15,25 +15,25 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
     useProductFilter(products);
 
   return (
-    <section className="space-y-8">
-      <div className="space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5 md:p-6">
-        <div className="grid gap-4 md:grid-cols-[1fr_auto]">
+    <section className="space-y-6 md:space-y-8">
+      <div className="space-y-4 rounded-[1.75rem] border border-luxury-gold/20 bg-gradient-to-r from-[#14110e] to-[#0d0d0d] p-4 sm:space-y-5 sm:p-5 md:rounded-3xl md:p-6">
+        <div className="grid gap-3 md:grid-cols-[1fr_auto] md:gap-4">
           <label className="relative block">
-            <span className="mb-2 block text-[10px] uppercase tracking-[0.24em] text-luxury-white/55">Search</span>
+            <span className="mb-2 block text-[10px] uppercase tracking-[0.18em] text-luxury-white/55 sm:tracking-[0.24em]">Search</span>
             <input
               type="text"
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
               placeholder="Find tote, clutch, loafer..."
-              className="w-full rounded-full border border-white/20 bg-black/60 px-5 py-3 text-sm text-luxury-white outline-none transition focus:border-luxury-gold"
+              className="w-full rounded-full border border-white/20 bg-black/60 px-4 py-2.5 text-sm text-luxury-white outline-none transition focus:border-luxury-gold sm:px-5 sm:py-3"
             />
           </label>
           <label className="block md:min-w-60">
-            <span className="mb-2 block text-[10px] uppercase tracking-[0.24em] text-luxury-white/55">Sort by</span>
+            <span className="mb-2 block text-[10px] uppercase tracking-[0.18em] text-luxury-white/55 sm:tracking-[0.24em]">Sort by</span>
             <select
               value={sortBy}
               onChange={(event) => setSortBy(event.target.value as typeof sortBy)}
-              className="w-full rounded-full border border-white/20 bg-black/60 px-5 py-3 text-sm text-luxury-white outline-none transition focus:border-luxury-gold"
+              className="w-full rounded-full border border-white/20 bg-black/60 px-4 py-2.5 text-sm text-luxury-white outline-none transition focus:border-luxury-gold sm:px-5 sm:py-3"
             >
               <option value="featured">Featured</option>
               <option value="price-asc">Price: Low to High</option>
