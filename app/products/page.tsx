@@ -1,10 +1,10 @@
 import { getProducts } from "@/application/use-cases/get-products";
-import { createMockProductRepository } from "@/infrastructure/repositories/mock-product-repository";
+import { getProductRepository } from "@/infrastructure/container";
 import { ProductCatalog } from "@/components/sections/product-catalog";
 import { mapProductToCardModel } from "@/presentation/view-models/product-view-model";
 
 export default async function ProductsPage() {
-  const products = await getProducts(createMockProductRepository());
+  const products = await getProducts(getProductRepository());
   const cards = products.map(mapProductToCardModel);
 
   return (

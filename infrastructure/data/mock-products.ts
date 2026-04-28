@@ -1,6 +1,6 @@
-import { Product } from "@/domain/entities/product";
+import type { Product } from "@/domain/entities/product";
 
-export const MOCK_PRODUCTS: Product[] = [
+export const MOCK_PRODUCTS: readonly Product[] = [
   {
     id: "bag-aurum-tote",
     slug: "aurum-signature-tote",

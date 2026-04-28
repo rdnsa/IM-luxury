@@ -5,12 +5,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { BRAND_NAME } from "@/presentation/config/contact";
+import { buildWhatsAppUrl } from "@/presentation/utils/whatsapp";
 import luxuryLogo from "@/src/assets/Logo1.1.png";
 
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Collections" }
 ];
+
+const PRIVATE_CONSULT_URL = buildWhatsAppUrl(
+  `Hello ${BRAND_NAME}, I want to book a private consultation.`
+);
 
 export function LuxuryNavbar() {
   const pathname = usePathname();
@@ -71,7 +77,7 @@ export function LuxuryNavbar() {
           })}
           <li>
             <a
-              href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
+              href={PRIVATE_CONSULT_URL}
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-luxury-gold bg-black/30 px-4 py-2 text-[10px] tracking-[0.2em] text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"
@@ -82,7 +88,7 @@ export function LuxuryNavbar() {
         </ul>
         <div className="flex items-center gap-2 md:hidden">
           <a
-            href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
+            href={PRIVATE_CONSULT_URL}
             target="_blank"
             rel="noreferrer"
             className="rounded-full border border-luxury-gold px-3 py-2 text-[10px] tracking-[0.16em] text-luxury-gold"
@@ -132,7 +138,7 @@ export function LuxuryNavbar() {
               })}
               <li>
                 <a
-                  href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20book%20a%20private%20consultation."
+                  href={PRIVATE_CONSULT_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="block rounded-xl border border-luxury-gold px-4 py-3 text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"

@@ -1,6 +1,8 @@
-export type ProductCategory = "bag" | "shoe";
+export const PRODUCT_CATEGORIES = ["bag", "shoe"] as const;
 
-export type Product = {
+export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
+
+export type Product = Readonly<{
   id: string;
   slug: string;
   name: string;
@@ -8,8 +10,8 @@ export type Product = {
   price: number;
   description: string;
   image: string;
-  sizes?: string[];
-  colors?: string[];
-  colorImages?: Record<string, string>;
+  sizes?: readonly string[];
+  colors?: readonly string[];
+  colorImages?: Readonly<Record<string, string>>;
   featured?: boolean;
-};
+}>;

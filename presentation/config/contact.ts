@@ -1,0 +1,2 @@
+export const BRAND_NAME = "I'M LUXURY BAG";
+export const WHATSAPP_PHONE_NUMBER = "6285156684881";
