@@ -27,7 +27,7 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
 
   return (
     <section className="space-y-6 md:space-y-8">
-      <div className="space-y-4 rounded-[1.75rem] border border-luxury-gold/20 bg-gradient-to-r from-[#14110e] to-[#0d0d0d] p-4 sm:space-y-5 sm:p-5 md:rounded-3xl md:p-6">
+      <div className="space-y-4 rounded-lg border border-white/10 bg-[#0b0b0a] p-4 sm:space-y-5 sm:p-5 md:p-6">
         <div className="grid gap-3 md:grid-cols-[1fr_auto] md:gap-4">
           <label className="relative block">
             <span className="mb-2 block text-[10px] uppercase tracking-[0.18em] text-luxury-white/55 sm:tracking-[0.24em]">Search</span>
@@ -36,7 +36,7 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
               placeholder="Find tote, clutch, loafer..."
-              className="w-full rounded-full border border-white/20 bg-black/60 px-4 py-2.5 text-sm text-luxury-white outline-none transition focus:border-luxury-gold sm:px-5 sm:py-3"
+              className="w-full rounded-lg border border-white/20 bg-black/60 px-4 py-2.5 text-sm text-luxury-white outline-none transition focus:border-luxury-gold sm:px-5 sm:py-3"
             />
           </label>
           <label className="block md:min-w-60">
@@ -44,7 +44,7 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
             <select
               value={sortBy}
               onChange={(event) => setSortBy(event.target.value as ProductSort)}
-              className="w-full rounded-full border border-white/20 bg-black/60 px-4 py-2.5 text-sm text-luxury-white outline-none transition focus:border-luxury-gold sm:px-5 sm:py-3"
+              className="w-full rounded-lg border border-white/20 bg-black/60 px-4 py-2.5 text-sm text-luxury-white outline-none transition focus:border-luxury-gold sm:px-5 sm:py-3"
             >
               {PRODUCT_SORT_OPTIONS.map((option) => (
                 <option key={option.value} value={option.value}>

@@ -21,7 +21,7 @@ const TESTIMONIALS = [
 
 export function ClientLoveSection() {
   return (
-    <section className="section-spacing bg-gradient-to-b from-luxury-black via-[#0d0c0a] to-[#101010]">
+    <section className="section-spacing border-t border-white/10 bg-[#070707]">
       <div className="luxury-container">
         <div className="mb-10">
           <p className="mb-3 text-xs uppercase tracking-[0.28em] text-luxury-gold">Client Love</p>
@@ -29,9 +29,9 @@ export function ClientLoveSection() {
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {TESTIMONIALS.map((item) => (
-            <article key={item.name} className="luxury-panel rounded-3xl p-7">
+            <article key={item.name} className="rounded-lg border border-white/10 bg-black/45 p-7">
               <p className="text-[10px] uppercase tracking-[0.22em] text-luxury-gold">Client Rating 5.0 / 5</p>
-              <p className="text-sm leading-relaxed text-luxury-white/80">&ldquo;{item.quote}&rdquo;</p>
+              <p className="mt-5 text-sm leading-relaxed text-luxury-white/80">&ldquo;{item.quote}&rdquo;</p>
               <div className="mt-6">
                 <p className="font-semibold text-luxury-beige">{item.name}</p>
                 <p className="text-xs uppercase tracking-[0.2em] text-luxury-white/45">{item.city}</p>

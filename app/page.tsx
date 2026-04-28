@@ -15,8 +15,8 @@ export default async function HomePage() {
     <main className="min-h-screen">
       <HeroSection />
       <CollectionSection
-        title="Featured Collection"
-        subtitle="Curated icons crafted to define modern luxury."
+        title="Featured Icons"
+        subtitle="A concise selection of bags and shoes with refined silhouettes, polished finishes, and personal guidance before purchase."
         products={featuredProducts}
       />
       <ValuePropositionSection />

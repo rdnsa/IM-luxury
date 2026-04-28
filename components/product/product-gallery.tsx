@@ -7,7 +7,7 @@ type ProductGalleryProps = {
 
 export function ProductGallery({ name, image }: ProductGalleryProps) {
   return (
-    <div className="group relative h-[360px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 sm:h-[430px] md:h-[520px] md:rounded-3xl">
+    <div className="group relative h-[360px] overflow-hidden rounded-lg border border-white/10 bg-black/40 sm:h-[430px] md:h-[520px]">
       <div key={image} className="absolute inset-0">
         <Image
           src={image}
