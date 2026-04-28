@@ -1,4 +1,4 @@
-import { Product, ProductCategory } from "@/domain/entities/product";
+import type { Product, ProductCategory } from "@/domain/entities/product";
 import { formatCurrency } from "@/presentation/utils/format-currency";
 
 export type ProductCardModel = {

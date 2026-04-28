@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { BRAND_NAME } from "@/presentation/config/contact";
+import { buildWhatsAppUrl } from "@/presentation/utils/whatsapp";
 
-const WHATSAPP_URL =
-  "https://wa.me/6281234567890?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20would%20like%20to%20consult%20about%20your%20premium%20collection.";
+const WHATSAPP_URL = buildWhatsAppUrl(
+  `Hello ${BRAND_NAME}, I would like to consult about your premium collection.`
+);
 
 export function FloatingWhatsAppButton() {
   return (
@@ -16,9 +19,10 @@ export function FloatingWhatsAppButton() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
       whileHover={{ scale: 1.08 }}
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-luxury-gold bg-black text-luxury-gold shadow-luxury backdrop-blur-sm"
+      whileTap={{ scale: 0.95 }}
+      className="fixed bottom-[calc(env(safe-area-inset-bottom)+0.85rem)] right-3 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-luxury-gold bg-black text-luxury-gold shadow-[0_14px_30px_-18px_rgba(184,156,109,0.9)] backdrop-blur-sm sm:bottom-20 sm:right-4 sm:h-12 sm:w-12 md:bottom-6 md:right-6 md:h-14 md:w-14"
     >
-      <span className="text-lg font-semibold">WA</span>
+      <span className="text-[13px] font-semibold sm:text-base md:text-lg">WA</span>
     </motion.a>
   );
 }

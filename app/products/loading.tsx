@@ -2,7 +2,7 @@ import { SkeletonCard } from "@/components/common/skeleton-card";
 
 export default function ProductsLoading() {
   return (
-    <main className="luxury-container section-spacing pt-32">
+    <main className="luxury-container pb-16 pt-28 md:pb-24">
       <div className="mb-10 space-y-4">
         <div className="skeleton h-5 w-36 rounded-full" />
         <div className="skeleton h-12 w-60 rounded-xl" />

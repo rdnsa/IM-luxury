@@ -1,6 +1,6 @@
 export default function ProductDetailLoading() {
   return (
-    <main className="luxury-container section-spacing pt-32">
+    <main className="luxury-container pb-16 pt-28 md:pb-24">
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="skeleton h-[520px] w-full rounded-3xl" />
         <section className="space-y-6">

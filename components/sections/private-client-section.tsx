@@ -9,12 +9,12 @@ export function PrivateClientSection() {
 
   const whatsappLink = useMemo(() => {
     const message = `Hello I'M LUXURY BAG, my name is ${name || "private client"}. I am interested in ${interest} with budget ${budget}. Please assist me with recommendations.`;
-    return `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/6285156684881?text=${encodeURIComponent(message)}`;
   }, [budget, interest, name]);
 
   return (
     <section className="section-spacing bg-luxury-black">
-      <div className="luxury-container grid gap-8 rounded-[2rem] border border-luxury-gold/30 bg-gradient-to-r from-[#17130f] via-black to-[#17130f] p-8 md:grid-cols-[1.2fr_1fr] md:p-10">
+      <div className="luxury-container grid gap-8 rounded-[2rem] border border-luxury-gold/30 bg-gradient-to-r from-[#19140f] via-black to-[#19140f] p-8 md:grid-cols-[1.2fr_1fr] md:p-10">
         <div>
           <p className="mb-3 text-xs uppercase tracking-[0.28em] text-luxury-gold">Private Client Service</p>
           <h2 className="font-serif text-3xl leading-tight md:text-5xl">Book a Personal Luxury Consultation</h2>
@@ -22,8 +22,18 @@ export function PrivateClientSection() {
             Dapatkan kurasi produk berdasarkan style, kebutuhan acara, dan preferensi budget Anda langsung dengan
             tim concierge kami.
           </p>
+          <div className="mt-8 grid max-w-xl grid-cols-2 gap-3">
+            <div className="luxury-panel rounded-2xl px-4 py-3">
+              <p className="text-xl font-semibold text-luxury-gold">1:1</p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-luxury-white/65">Personal Curation</p>
+            </div>
+            <div className="luxury-panel rounded-2xl px-4 py-3">
+              <p className="text-xl font-semibold text-luxury-gold">Fast</p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-luxury-white/65">WhatsApp Support</p>
+            </div>
+          </div>
         </div>
-        <form className="space-y-4 rounded-3xl border border-white/15 bg-black/45 p-6">
+        <form className="space-y-4 rounded-3xl border border-white/15 bg-black/45 p-6 shadow-[0_30px_60px_-35px_rgba(0,0,0,0.8)]">
           <label className="block">
             <span className="mb-2 block text-[10px] uppercase tracking-[0.24em] text-luxury-white/60">Name</span>
             <input
@@ -62,7 +72,7 @@ export function PrivateClientSection() {
             href={whatsappLink}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex w-full items-center justify-center rounded-full border border-luxury-gold bg-luxury-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-luxury-black transition hover:shadow-luxury"
+            className="inline-flex w-full items-center justify-center rounded-full border border-luxury-gold bg-luxury-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-luxury-black transition hover:shadow-[0_18px_40px_-22px_rgba(184,156,109,0.85)]"
           >
             Start Private Consultation
           </a>
