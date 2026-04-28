@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ProductCategory } from "@/domain/entities/product";
+import type { ProductCategory } from "@/domain/entities/product";
 import { ProductGallery } from "@/components/product/product-gallery";
 import { ProductVariantSelector } from "@/components/product/product-variant-selector";
 import { formatCurrency } from "@/presentation/utils/format-currency";
@@ -12,9 +12,9 @@ type ProductDetailShowcaseProps = {
   description: string;
   price: number;
   image: string;
-  sizes?: string[];
-  colors?: string[];
-  colorImages?: Record<string, string>;
+  sizes?: readonly string[];
+  colors?: readonly string[];
+  colorImages?: Readonly<Record<string, string>>;
 };
 
 export function ProductDetailShowcase({
@@ -28,6 +28,7 @@ export function ProductDetailShowcase({
   colorImages
 }: ProductDetailShowcaseProps) {
   const [selectedColor, setSelectedColor] = useState<string | null>(colors?.[0] ?? null);
+  const priceLabel = formatCurrency(price);
 
   const activeImage = useMemo(() => {
     if (!selectedColor || !colorImages?.[selectedColor]) {
@@ -48,14 +49,14 @@ export function ProductDetailShowcase({
         <p className="text-base text-luxury-white/70 md:text-lg">{description}</p>
         <div className="gold-line" />
         <div className="space-y-3">
-          <p className="text-2xl font-semibold md:text-3xl">{formatCurrency(price)}</p>
+          <p className="text-2xl font-semibold md:text-3xl">{priceLabel}</p>
           <p className="text-xs uppercase tracking-[0.14em] text-luxury-white/60 md:text-sm md:tracking-[0.18em]">
             Handcrafted Premium Collection
           </p>
         </div>
         <ProductVariantSelector
           productName={name}
-          priceLabel={formatCurrency(price)}
+          priceLabel={priceLabel}
           sizes={sizes}
           colors={colors}
           selectedColor={selectedColor}

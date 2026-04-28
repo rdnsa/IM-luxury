@@ -1,12 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { BRAND_NAME } from "@/presentation/config/contact";
+import { buildWhatsAppUrl } from "@/presentation/utils/whatsapp";
 
 type ProductVariantSelectorProps = {
   productName: string;
   priceLabel: string;
-  sizes?: string[];
-  colors?: string[];
+  sizes?: readonly string[];
+  colors?: readonly string[];
   selectedColor?: string | null;
   onColorChange?: (color: string) => void;
 };
@@ -33,7 +35,7 @@ export function ProductVariantSelector({
     setInternalSelectedColor(color);
   };
 
-  const whatsappMessage = useMemo(() => {
+  const whatsappUrl = useMemo(() => {
     const variantParts: string[] = [];
 
     if (selectedSize) {
@@ -46,8 +48,8 @@ export function ProductVariantSelector({
 
     const variantText = variantParts.length ? ` ${variantParts.join(" | ")}.` : "";
 
-    return encodeURIComponent(
-      `Hello I'M LUXURY BAG, I am interested in ${productName} (${priceLabel}).${variantText} Please share availability details.`
+    return buildWhatsAppUrl(
+      `Hello ${BRAND_NAME}, I am interested in ${productName} (${priceLabel}).${variantText} Please share availability details.`
     );
   }, [activeColor, priceLabel, productName, selectedSize]);
 
@@ -112,7 +114,7 @@ export function ProductVariantSelector({
       )}
 
       <a
-        href={`https://wa.me/6285156684881?text=${whatsappMessage}`}
+        href={whatsappUrl}
         target="_blank"
         rel="noreferrer"
         className="inline-flex items-center rounded-full border border-luxury-gold bg-luxury-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-luxury-black transition duration-500 hover:scale-[1.03] hover:shadow-luxury md:px-8 md:text-sm md:tracking-[0.22em]"

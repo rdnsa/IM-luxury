@@ -3,16 +3,27 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { CategoryFilter } from "@/components/product/category-filter";
 import { ProductCard } from "@/components/product/product-card";
-import { useProductFilter } from "@/presentation/hooks/use-product-filter";
-import { ProductCardModel } from "@/presentation/view-models/product-view-model";
+import {
+  PRODUCT_SORT_OPTIONS,
+  type ProductSort,
+  useProductFilter
+} from "@/presentation/hooks/use-product-filter";
+import type { ProductCardModel } from "@/presentation/view-models/product-view-model";
 
 type ProductCatalogProps = {
   products: ProductCardModel[];
 };
 
 export function ProductCatalog({ products }: ProductCatalogProps) {
-  const { activeFilter, setActiveFilter, filteredProducts, searchQuery, setSearchQuery, sortBy, setSortBy } =
-    useProductFilter(products);
+  const {
+    activeFilter,
+    setActiveFilter,
+    filteredProducts,
+    searchQuery,
+    setSearchQuery,
+    sortBy,
+    setSortBy
+  } = useProductFilter(products);
 
   return (
     <section className="space-y-6 md:space-y-8">
@@ -32,13 +43,14 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
             <span className="mb-2 block text-[10px] uppercase tracking-[0.18em] text-luxury-white/55 sm:tracking-[0.24em]">Sort by</span>
             <select
               value={sortBy}
-              onChange={(event) => setSortBy(event.target.value as typeof sortBy)}
+              onChange={(event) => setSortBy(event.target.value as ProductSort)}
               className="w-full rounded-full border border-white/20 bg-black/60 px-4 py-2.5 text-sm text-luxury-white outline-none transition focus:border-luxury-gold sm:px-5 sm:py-3"
             >
-              <option value="featured">Featured</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="name-asc">Name: A to Z</option>
+              {PRODUCT_SORT_OPTIONS.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
             </select>
           </label>
         </div>

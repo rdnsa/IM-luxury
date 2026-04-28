@@ -1,8 +1,6 @@
 "use client";
 
-import { ProductFilter } from "@/presentation/hooks/use-product-filter";
-
-const FILTERS: ProductFilter[] = ["all", "bag", "shoe"];
+import { PRODUCT_FILTERS, type ProductFilter } from "@/presentation/hooks/use-product-filter";
 
 type CategoryFilterProps = {
   active: ProductFilter;
@@ -12,7 +10,7 @@ type CategoryFilterProps = {
 export function CategoryFilter({ active, onChange }: CategoryFilterProps) {
   return (
     <div className="flex flex-wrap gap-3">
-      {FILTERS.map((filter) => {
+      {PRODUCT_FILTERS.map((filter) => {
         const isActive = active === filter;
         return (
           <button

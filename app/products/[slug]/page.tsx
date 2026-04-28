@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { getProductBySlug } from "@/application/use-cases/get-product-by-slug";
 import { getProducts } from "@/application/use-cases/get-products";
-import { createMockProductRepository } from "@/infrastructure/repositories/mock-product-repository";
+import { getRelatedProducts } from "@/application/use-cases/get-related-products";
+import { getProductRepository } from "@/infrastructure/container";
 import { ProductDetailShowcase } from "@/components/product/product-detail-showcase";
 import { CollectionSection } from "@/components/sections/collection-section";
 import { mapProductToCardModel } from "@/presentation/view-models/product-view-model";
@@ -11,7 +12,7 @@ type ProductDetailPageProps = {
 };
 
 export async function generateStaticParams() {
-  const products = await getProducts(createMockProductRepository());
+  const products = await getProducts(getProductRepository());
 
   return products.map((product) => ({ slug: product.slug }));
 }
@@ -20,18 +21,14 @@ export const dynamicParams = false;
 
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { slug } = await params;
-  const repository = createMockProductRepository();
+  const repository = getProductRepository();
   const product = await getProductBySlug(repository, slug);
-  const allProducts = await getProducts(repository);
 
   if (!product) {
     notFound();
   }
 
-  const relatedProducts = allProducts
-    .filter((item) => item.slug !== product.slug)
-    .slice(0, 3)
-    .map(mapProductToCardModel);
+  const relatedProducts = (await getRelatedProducts(repository, product)).map(mapProductToCardModel);
 
   return (
     <main className="pt-24 md:pt-28">

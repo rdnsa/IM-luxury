@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ProductCardModel } from "@/presentation/view-models/product-view-model";
+import type { ProductCardModel } from "@/presentation/view-models/product-view-model";
 import { ProductCard } from "@/components/product/product-card";
 
 type CollectionSectionProps = {
