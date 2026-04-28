@@ -10,7 +10,6 @@ export default function ProductsLoading() {
       <div className="mb-8 flex gap-3">
         <div className="skeleton h-10 w-24 rounded-full" />
         <div className="skeleton h-10 w-24 rounded-full" />
-        <div className="skeleton h-10 w-24 rounded-full" />
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 9 }, (_, index) => (

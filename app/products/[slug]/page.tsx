@@ -46,7 +46,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       </div>
       <CollectionSection
         title="You May Also Love"
-        subtitle="Pasangan sempurna untuk melengkapi gaya luxury Anda."
+        subtitle="Pilihan tas lain untuk melengkapi gaya luxury Anda."
         products={relatedProducts}
       />
     </main>

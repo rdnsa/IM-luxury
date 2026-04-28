@@ -16,7 +16,7 @@ export default async function HomePage() {
       <HeroSection />
       <CollectionSection
         title="Featured Icons"
-        subtitle="A concise selection of bags and shoes with refined silhouettes, polished finishes, and personal guidance before purchase."
+        subtitle="A concise selection of luxury bags with refined silhouettes, polished finishes, and personal guidance before purchase."
         products={featuredProducts}
       />
       <ValuePropositionSection />

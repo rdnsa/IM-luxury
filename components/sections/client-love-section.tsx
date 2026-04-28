@@ -15,7 +15,7 @@ const TESTIMONIALS = [
     name: "Clara M.",
     city: "Surabaya",
     quote:
-      "I bought both shoes and a mini satchel. The details and comfort are exactly what I expect from premium products."
+      "I bought a mini satchel and an evening clutch. The details are exactly what I expect from premium products."
   }
 ];
 

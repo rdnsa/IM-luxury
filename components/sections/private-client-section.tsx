@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { BRAND_NAME } from "@/presentation/config/contact";
+import { buildWhatsAppUrl } from "@/presentation/utils/whatsapp";
 
 export function PrivateClientSection() {
   const [name, setName] = useState("");
@@ -8,8 +10,8 @@ export function PrivateClientSection() {
   const [budget, setBudget] = useState("IDR 7M - 12M");
 
   const whatsappLink = useMemo(() => {
-    const message = `Hello I'M LUXURY BAG, my name is ${name || "private client"}. I am interested in ${interest} with budget ${budget}. Please assist me with recommendations.`;
-    return `https://wa.me/6285156684881?text=${encodeURIComponent(message)}`;
+    const message = `Hello ${BRAND_NAME}, my name is ${name || "private client"}. I am interested in ${interest} with budget ${budget}. Please assist me with recommendations.`;
+    return buildWhatsAppUrl(message);
   }, [budget, interest, name]);
 
   return (
@@ -52,8 +54,9 @@ export function PrivateClientSection() {
               className="w-full rounded-lg border border-white/20 bg-black/65 px-4 py-3 text-sm outline-none transition focus:border-luxury-gold"
             >
               <option>Bag Collection</option>
-              <option>Shoe Collection</option>
-              <option>Full Styling Set</option>
+              <option>Mini Bag</option>
+              <option>Evening Clutch</option>
+              <option>Daily Tote</option>
             </select>
           </label>
           <label className="block">

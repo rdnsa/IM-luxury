@@ -3,6 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { BRAND_NAME } from "@/presentation/config/contact";
+import { buildWhatsAppUrl } from "@/presentation/utils/whatsapp";
+
+const PERSONAL_SHOPPING_URL = buildWhatsAppUrl(
+  `Hello ${BRAND_NAME}, I want to discover your latest bag collection.`
+);
 
 export function HeroSection() {
   return (
@@ -37,7 +43,6 @@ export function HeroSection() {
             className="font-[var(--font-serif)] text-[3rem] leading-[0.9] text-luxury-white sm:text-6xl md:text-8xl"
           >
             I&apos;M LUXURY
-            <span className="block text-luxury-beige/95">BAG</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +50,7 @@ export function HeroSection() {
             transition={{ delay: 0.3, duration: 1.2, ease: "easeOut" }}
             className="mt-6 max-w-2xl text-base leading-relaxed text-luxury-white/76 md:text-lg"
           >
-            Premium bags and shoes curated for polished daily presence, formal occasions, and clients who want each
+            Premium bags curated for polished daily presence, formal occasions, and clients who want each
             piece to feel considered before it is delivered.
           </motion.p>
           <motion.div
@@ -61,7 +66,7 @@ export function HeroSection() {
               Explore Collection
             </Link>
             <a
-              href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20discover%20your%20latest%20collection."
+              href={PERSONAL_SHOPPING_URL}
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-luxury-white/35 bg-black/25 px-7 py-3 text-xs uppercase tracking-[0.22em] text-luxury-white transition duration-500 hover:border-luxury-gold hover:text-luxury-gold"
@@ -79,7 +84,7 @@ export function HeroSection() {
           <p className="text-[11px] uppercase tracking-[0.28em] text-luxury-gold">What You Receive</p>
           <div className="mt-5 space-y-5">
             {[
-              ["Curated Product", "Bags and shoes selected for elegant workwear, events, and refined daily styling."],
+              ["Curated Bags", "Bags selected for elegant workwear, events, and refined daily styling."],
               ["Premium Finish", "Structured silhouettes, polished hardware, and materials chosen for a luxury feel."],
               ["Private Guidance", "Direct consultation before purchase so the product matches your occasion and style."]
             ].map(([title, description]) => (

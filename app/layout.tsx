@@ -4,7 +4,7 @@ import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { LuxuryNavbar } from "@/components/layout/luxury-navbar";
 import { FloatingWhatsAppButton } from "@/components/common/floating-whatsapp-button";
-import luxuryLogo from "@/src/assets/Logo1.1 Remove BG.png";
+import { BRAND_NAME } from "@/presentation/config/contact";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -20,13 +20,13 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "I'M LUXURY BAG | Luxury Within Reach",
+  title: `${BRAND_NAME} | Luxury Within Reach`,
   description:
-    "Discover premium bags and shoes with elevated style, refined craftsmanship, and timeless luxury.",
+    "Discover premium bags with elevated style, refined craftsmanship, and timeless luxury.",
   icons: {
-    icon: luxuryLogo.src,
-    shortcut: luxuryLogo.src,
-    apple: luxuryLogo.src
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: ["/favicon.png"],
+    apple: [{ url: "/favicon.png", type: "image/png" }]
   }
 };
 

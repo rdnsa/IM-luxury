@@ -35,7 +35,7 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
               type="text"
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
-              placeholder="Find tote, clutch, loafer..."
+              placeholder="Find tote, clutch, shoulder bag..."
               className="w-full rounded-lg border border-white/20 bg-black/60 px-4 py-2.5 text-sm text-luxury-white outline-none transition focus:border-luxury-gold sm:px-5 sm:py-3"
             />
           </label>

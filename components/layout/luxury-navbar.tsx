@@ -43,7 +43,7 @@ export function LuxuryNavbar() {
             <span className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-luxury-gold/50 bg-black/60 shadow-[0_0_22px_rgba(184,156,109,0.2)] md:h-11 md:w-11">
               <Image
                 src={luxuryLogo}
-                alt="I'M Luxury Bag logo"
+                alt="I'M Luxury logo"
                 fill
                 priority
                 sizes="44px"
@@ -51,7 +51,7 @@ export function LuxuryNavbar() {
               />
             </span>
             <span className="max-w-[8.5rem] font-[var(--font-serif)] text-[13px] leading-tight tracking-[0.14em] text-luxury-white sm:max-w-none sm:text-base md:text-2xl md:tracking-[0.2em]">
-              I&apos;M LUXURY BAG
+              I&apos;M LUXURY
             </span>
           </Link>
           <ul className="hidden items-center gap-7 text-[11px] uppercase tracking-[0.2em] text-luxury-white/75 md:flex">

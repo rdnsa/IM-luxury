@@ -9,7 +9,7 @@ const VALUES = [
   },
   {
     title: "Personal Concierge",
-    description: "Direct WhatsApp support helps clients choose the right bag or shoe before the order is confirmed."
+    description: "Direct WhatsApp support helps clients choose the right bag before the order is confirmed."
   }
 ];
 

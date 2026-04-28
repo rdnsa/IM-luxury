@@ -7,6 +7,11 @@ type CategoryFilterProps = {
   onChange: (value: ProductFilter) => void;
 };
 
+const FILTER_LABELS: Partial<Record<ProductFilter, string>> = {
+  all: "All Bags",
+  bag: "Bags"
+};
+
 export function CategoryFilter({ active, onChange }: CategoryFilterProps) {
   return (
     <div className="flex flex-wrap gap-3">
@@ -23,7 +28,7 @@ export function CategoryFilter({ active, onChange }: CategoryFilterProps) {
                 : "border-white/20 text-luxury-white/70 hover:border-luxury-gold hover:text-luxury-gold"
             }`}
           >
-            {filter}
+            {FILTER_LABELS[filter] ?? filter}
           </button>
         );
       })}

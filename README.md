@@ -1,6 +1,6 @@
-# I'M LUXURY BAG
+# I'M LUXURY
 
-I'M LUXURY BAG is a modern luxury fashion showcase website for curated bags and shoes. The project is built with Next.js App Router, TypeScript, Tailwind CSS, and Framer Motion, with a small Clean Architecture structure to keep business logic, data access, and UI concerns separated.
+I'M LUXURY is a modern luxury fashion showcase website for curated bags. The project is built with Next.js App Router, TypeScript, Tailwind CSS, and Framer Motion, with a small Clean Architecture structure to keep business logic, data access, and UI concerns separated.
 
 The application is designed as a polished storefront experience: visitors can browse collections, filter and sort products, view product details, choose available variants, and contact the brand through WhatsApp.
 
