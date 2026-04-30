@@ -3,77 +3,73 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { DropCountdown } from "@/components/common/drop-countdown";
+import { BRAND_NAME } from "@/presentation/config/contact";
+import { buildWhatsAppUrl } from "@/presentation/utils/whatsapp";
+
+const PERSONAL_SHOPPING_URL = buildWhatsAppUrl(
+  `Hello ${BRAND_NAME}, I want to discover your latest bag collection.`
+);
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-luxury-black pt-20">
+    <section className="relative flex min-h-screen items-end overflow-hidden bg-luxury-black pt-24">
       <Image
-        src="https://images.unsplash.com/photo-1601924638867-3ec2b8dddb9f?auto=format&fit=crop&w=2000&q=80"
-        alt="Luxury fashion editorial background"
+        src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=2200&q=82"
+        alt="Luxury handbag editorial background"
         fill
         priority
         sizes="100vw"
-        quality={75}
-        className="absolute inset-0 object-cover object-center"
+        quality={82}
+        className="absolute inset-0 object-cover object-[58%_center]"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(112deg,rgba(4,4,4,0.94)_18%,rgba(4,4,4,0.48)_62%,rgba(4,4,4,0.9)_100%)]" />
-      <div className="absolute inset-0 bg-grain opacity-90" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black via-black/70 to-transparent" />
-      <div className="luxury-container relative z-10 grid gap-10 pb-20 pt-16 md:grid-cols-[1.15fr_0.85fr] md:items-end md:pb-24 md:pt-20">
-        <div>
+      <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(3,3,3,0.95)_0%,rgba(3,3,3,0.82)_38%,rgba(3,3,3,0.42)_68%,rgba(3,3,3,0.9)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.56)_0%,rgba(0,0,0,0.08)_38%,rgba(0,0,0,0.94)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black via-black/80 to-transparent" />
+
+      <div className="luxury-container relative z-10 grid gap-12 pb-16 pt-20 md:grid-cols-[minmax(0,1.05fr)_minmax(18rem,0.52fr)] md:items-end md:pb-20 md:pt-28">
+        <div className="max-w-4xl">
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="mb-5 inline-flex items-center rounded-full border border-luxury-gold/35 bg-black/45 px-4 py-2 text-[10px] uppercase tracking-[0.3em] text-luxury-beige"
+            className="mb-5 text-[11px] uppercase tracking-[0.34em] text-luxury-gold"
           >
-            Curated Premium Edit
-          </motion.p>
-          <DropCountdown />
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1, ease: "easeOut" }}
-            className="mb-5 mt-7 text-sm uppercase tracking-[0.35em] text-luxury-beige"
-          >
-            Premium Bags & Shoes
+            Private Luxury Edit
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 1.15, ease: "easeOut" }}
-            className="max-w-4xl font-[var(--font-serif)] text-5xl leading-[0.95] text-luxury-white md:text-7xl"
+            className="font-[var(--font-serif)] text-[3rem] leading-[0.9] text-luxury-white sm:text-6xl md:text-8xl"
           >
-            I&apos;M LUXURY BAG
-            <span className="mt-3 block text-3xl text-luxury-beige/90 md:text-5xl">Own The Signature Presence</span>
+            I&apos;M LUXURY
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1.2, ease: "easeOut" }}
-            className="mt-6 max-w-xl text-base leading-relaxed text-luxury-white/75 md:text-lg"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-luxury-white/76 md:text-lg"
           >
-            Luxury Within Reach. Elevated essentials designed for modern women who value status, confidence, and
-            timeless style.
+            Premium bags curated for polished daily presence, formal occasions, and clients who want each
+            piece to feel considered before it is delivered.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45, duration: 1.15, ease: "easeOut" }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-9 flex flex-wrap gap-3"
           >
             <Link
               href="/products"
-              className="rounded-full border border-luxury-gold bg-luxury-gold px-8 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-luxury-black transition duration-500 hover:scale-[1.02] hover:shadow-[0_18px_40px_-22px_rgba(184,156,109,0.85)]"
+              className="rounded-full border border-luxury-gold bg-luxury-gold px-7 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-luxury-black transition duration-500 hover:scale-[1.02] hover:shadow-[0_18px_40px_-22px_rgba(184,156,109,0.85)]"
             >
               Explore Collection
             </Link>
             <a
-              href="https://wa.me/6285156684881?text=Hello%20I%27M%20LUXURY%20BAG%2C%20I%20want%20to%20discover%20your%20latest%20collection."
+              href={PERSONAL_SHOPPING_URL}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-luxury-white/45 bg-black/25 px-8 py-3 text-xs uppercase tracking-[0.25em] text-luxury-white transition duration-500 hover:border-luxury-gold hover:text-luxury-gold"
+              className="rounded-full border border-luxury-white/35 bg-black/25 px-7 py-3 text-xs uppercase tracking-[0.22em] text-luxury-white transition duration-500 hover:border-luxury-gold hover:text-luxury-gold"
             >
               Personal Shopping
             </a>
@@ -83,28 +79,20 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1.1, ease: "easeOut" }}
-          className="space-y-3"
+          className="border-y border-luxury-gold/28 py-6 md:mb-3"
         >
-          <div className="luxury-panel rounded-3xl p-6 md:p-7">
-            <p className="text-[11px] uppercase tracking-[0.24em] text-luxury-gold">Luxury Promise</p>
-            <p className="mt-4 font-[var(--font-serif)] text-3xl leading-tight text-luxury-white">Limited Pieces</p>
-            <p className="mt-3 text-sm leading-relaxed text-luxury-white/70">
-              Every drop is intentionally small, so your look stays exclusive and unmistakably premium.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-3">
-            <div className="luxury-panel rounded-2xl px-4 py-3">
-              <p className="text-xl font-semibold text-luxury-gold">98%</p>
-              <p className="text-[10px] uppercase tracking-[0.18em] text-luxury-white/70">Satisfaction</p>
-            </div>
-            <div className="luxury-panel rounded-2xl px-4 py-3">
-              <p className="text-xl font-semibold text-luxury-gold">24H</p>
-              <p className="text-[10px] uppercase tracking-[0.18em] text-luxury-white/70">Response</p>
-            </div>
-            <div className="luxury-panel rounded-2xl px-4 py-3">
-              <p className="text-xl font-semibold text-luxury-gold">VIP</p>
-              <p className="text-[10px] uppercase tracking-[0.18em] text-luxury-white/70">Concierge</p>
-            </div>
+          <p className="text-[11px] uppercase tracking-[0.28em] text-luxury-gold">What You Receive</p>
+          <div className="mt-5 space-y-5">
+            {[
+              ["Curated Bags", "Bags selected for elegant workwear, events, and refined daily styling."],
+              ["Premium Finish", "Structured silhouettes, polished hardware, and materials chosen for a luxury feel."],
+              ["Private Guidance", "Direct consultation before purchase so the product matches your occasion and style."]
+            ].map(([title, description]) => (
+              <div key={title} className="grid gap-1 border-t border-white/10 pt-5 first:border-t-0 first:pt-0">
+                <p className="font-[var(--font-serif)] text-2xl text-luxury-white">{title}</p>
+                <p className="text-sm leading-relaxed text-luxury-white/66">{description}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

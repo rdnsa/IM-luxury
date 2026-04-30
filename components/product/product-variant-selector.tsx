@@ -56,7 +56,7 @@ export function ProductVariantSelector({
   return (
     <>
       {(sizes?.length || colors?.length) && (
-        <div className="space-y-4 rounded-2xl border border-luxury-gold/25 bg-luxury-white/[0.03] p-4 backdrop-blur md:p-5">
+        <div className="space-y-4 rounded-lg border border-luxury-gold/25 bg-luxury-white/[0.03] p-4 backdrop-blur md:p-5">
           {sizes?.length ? (
             <div className="space-y-2">
               <p className="text-[11px] uppercase tracking-[0.18em] text-luxury-white/60 md:text-xs">Sizes</p>
@@ -70,7 +70,7 @@ export function ProductVariantSelector({
                       type="button"
                       onClick={() => setSelectedSize(size)}
                       aria-pressed={isActive}
-                      className={`rounded-full border px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] transition duration-300 md:text-xs ${
+                      className={`rounded-lg border px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] transition duration-300 md:text-xs ${
                         isActive
                           ? "border-luxury-gold bg-luxury-gold text-luxury-black shadow-luxury"
                           : "border-luxury-gold/35 bg-luxury-white/[0.02] text-luxury-white/90 hover:border-luxury-gold/70"
@@ -97,7 +97,7 @@ export function ProductVariantSelector({
                       type="button"
                       onClick={() => handleSelectColor(color)}
                       aria-pressed={isActive}
-                      className={`rounded-full border px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] transition duration-300 md:text-xs ${
+                      className={`rounded-lg border px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] transition duration-300 md:text-xs ${
                         isActive
                           ? "border-luxury-gold bg-luxury-gold text-luxury-black shadow-luxury"
                           : "border-luxury-gold/35 bg-luxury-white/[0.02] text-luxury-white/90 hover:border-luxury-gold/70"

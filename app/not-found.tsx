@@ -12,7 +12,7 @@ export default function NotFoundPage() {
         href="/products"
         className="rounded-full border border-luxury-gold px-7 py-3 text-xs uppercase tracking-[0.22em] text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"
       >
-        Browse Products
+        Browse Bags
       </Link>
     </main>
   );

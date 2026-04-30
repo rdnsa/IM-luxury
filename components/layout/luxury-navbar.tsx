@@ -34,21 +34,16 @@ export function LuxuryNavbar() {
       transition={{ duration: 0.9, ease: "easeOut" }}
       className="fixed inset-x-0 top-[calc(env(safe-area-inset-top)+0.75rem)] z-50 px-3 sm:px-5"
     >
-      <div className="mx-auto w-full max-w-[86rem] overflow-hidden rounded-[1.7rem] border border-white/15 bg-black/62 shadow-[0_22px_60px_-28px_rgba(0,0,0,0.95),0_0_0_1px_rgba(184,156,109,0.08)] backdrop-blur-2xl md:rounded-[2rem]">
-        <div className="border-b border-white/10 bg-gradient-to-r from-[#1e1811]/95 via-black/90 to-[#1e1811]/95">
-          <div className="px-4 py-2 text-center text-[8px] uppercase tracking-[0.16em] text-luxury-beige sm:text-[9px] sm:tracking-[0.2em] md:text-[10px] md:tracking-[0.24em]">
-            Complimentary Premium Packaging for Orders This Week
-          </div>
-        </div>
+      <div className="mx-auto w-full max-w-[86rem] overflow-hidden rounded-xl border border-white/10 bg-[#070706]/78 shadow-[0_22px_60px_-34px_rgba(0,0,0,0.95),0_0_0_1px_rgba(184,156,109,0.06)] backdrop-blur-2xl">
         <nav className="flex h-16 items-center justify-between gap-4 px-4 sm:px-5 md:h-20 md:px-8 lg:px-10">
           <Link
             href="/"
             className="flex items-center gap-2.5 sm:gap-3"
           >
-            <span className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-luxury-gold/70 bg-black/60 shadow-[0_0_22px_rgba(184,156,109,0.25)] md:h-11 md:w-11">
+            <span className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-luxury-gold/50 bg-black/60 shadow-[0_0_22px_rgba(184,156,109,0.2)] md:h-11 md:w-11">
               <Image
                 src={luxuryLogo}
-                alt="I'M Luxury Bag logo"
+                alt="I'M Luxury logo"
                 fill
                 priority
                 sizes="44px"
@@ -56,7 +51,7 @@ export function LuxuryNavbar() {
               />
             </span>
             <span className="max-w-[8.5rem] font-[var(--font-serif)] text-[13px] leading-tight tracking-[0.14em] text-luxury-white sm:max-w-none sm:text-base md:text-2xl md:tracking-[0.2em]">
-              I&apos;M LUXURY BAG
+              I&apos;M LUXURY
             </span>
           </Link>
           <ul className="hidden items-center gap-7 text-[11px] uppercase tracking-[0.2em] text-luxury-white/75 md:flex">
@@ -82,7 +77,7 @@ export function LuxuryNavbar() {
                 href={PRIVATE_CONSULT_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-luxury-gold bg-black/30 px-4 py-2 text-[10px] tracking-[0.2em] text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"
+                className="rounded-full border border-luxury-gold/70 bg-black/25 px-4 py-2 text-[10px] tracking-[0.2em] text-luxury-gold transition hover:bg-luxury-gold hover:text-luxury-black"
               >
                 Private Consult
               </a>
@@ -101,7 +96,7 @@ export function LuxuryNavbar() {
             <button
               type="button"
               onClick={() => setIsMenuOpen((prev) => !prev)}
-              className="rounded-full border border-white/30 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-luxury-white"
+              className="rounded-full border border-white/25 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-luxury-white"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-nav-menu"
               aria-label="Toggle navigation menu"
@@ -118,7 +113,7 @@ export function LuxuryNavbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="border-t border-white/10 bg-black/90 px-4 pb-4 pt-3 backdrop-blur-xl md:hidden"
+              className="border-t border-white/10 bg-black/92 px-4 pb-4 pt-3 backdrop-blur-xl md:hidden"
             >
               <ul className="space-y-2 text-[11px] uppercase tracking-[0.2em] text-luxury-white/80">
                 {LINKS.map((link) => {

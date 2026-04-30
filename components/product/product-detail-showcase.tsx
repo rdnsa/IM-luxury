@@ -63,7 +63,7 @@ export function ProductDetailShowcase({
           onColorChange={setSelectedColor}
         />
         <p className="text-xs uppercase tracking-[0.16em] text-luxury-white/45">
-          Complimentary premium packaging and priority handling.
+          Signature packaging available with priority handling.
         </p>
       </section>
     </div>
